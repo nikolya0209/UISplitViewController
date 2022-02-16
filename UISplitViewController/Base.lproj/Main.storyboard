@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="TL4-Rf-4mg">
             <objects>
-                <viewController id="13n-TS-1q2" sceneMemberID="viewController">
+                <viewController id="13n-TS-1q2" customClass="DetailViewController" customModule="UISplitViewController" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7fQ-QL-MVa">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -23,7 +23,7 @@
             </objects>
             <point key="canvasLocation" x="-149" y="266"/>
         </scene>
-        <!--Root View Controller-->
+        <!--Food list-->
         <scene sceneID="ShL-Mm-S72">
             <objects>
                 <tableViewController clearsSelectionOnViewWillAppear="NO" id="Xux-6g-oCt" customClass="MasterTableViewController" customModule="UISplitViewController" customModuleProvider="target" sceneMemberID="viewController">
@@ -46,7 +46,7 @@
                             <outlet property="delegate" destination="Xux-6g-oCt" id="bUL-uI-3Cl"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="8r3-hv-7ex"/>
+                    <navigationItem key="navigationItem" title="Food list" id="8r3-hv-7ex"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GFn-bY-fkx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -66,7 +66,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GxA-dA-nCF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-149" y="-341"/>
+            <point key="canvasLocation" x="-149" y="-390"/>
         </scene>
         <!--Split View Controller-->
         <scene sceneID="TTR-Ex-Cga">
