@@ -15,6 +15,19 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let _ = (scene as? UIWindowScene) else { return }
         
+        guard let splitViewController = window?.rootViewController as? UISplitViewController,
+            let leftNavigationController = splitViewController.viewControllers.first as? UINavigationController,
+            let masterViewController = leftNavigationController.viewControllers.first as? MasterTableViewController,
+//            let detailViewController = splitViewController.viewControllers.last as? DetailViewController
+            let detailViewController = (splitViewController.viewControllers.last as? UINavigationController)?.topViewController as? DetailViewController
+        else { fatalError() }
+        
+        detailViewController.navigationItem.leftItemsSupplementBackButton = true
+        detailViewController.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem
+        
+        //masterViewController.delegate = detailViewController
+        let firstFood = masterViewController.food[3]
+        detailViewController.foodObject = firstFood
 
         
     }

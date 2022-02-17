@@ -7,6 +7,7 @@
 
 import UIKit
 
+
 class MasterTableViewController: UITableViewController {
 
     var food = FoodModel.fetchFood()
@@ -37,5 +38,7 @@ class MasterTableViewController: UITableViewController {
 
         return cell
     }
-    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let currentFood = food[indexPath.row]
+    }
 }

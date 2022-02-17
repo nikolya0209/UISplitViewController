@@ -9,21 +9,28 @@ import UIKit
 
 class DetailViewController: UIViewController {
 
+    @IBOutlet weak var foodImageView: UIImageView!
+    @IBOutlet weak var foodNameLabel: UILabel!
+    @IBOutlet weak var costLabel: UILabel!
+    @IBOutlet weak var descriptionTextView: UITextView!
+    
+    var foodObject: FoodModel? {
+        didSet {
+            set()
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func set() {
+        loadViewIfNeeded()
+        foodImageView.image = foodObject?.mainImage
+        foodNameLabel.text = foodObject?.foodName
+        costLabel.text = "\(foodObject?.cost ?? 0)$"
+        descriptionTextView.text = foodObject?.smallDescription
     }
-    */
-
 }

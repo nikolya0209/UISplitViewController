@@ -15,13 +15,61 @@
                     <view key="view" contentMode="scaleToFill" id="7fQ-QL-MVa">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ICr-Jt-4ir">
+                                <rect key="frame" x="87" y="104" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="d01-jG-I7i"/>
+                                    <constraint firstAttribute="height" constant="240" id="toe-IM-5Y2"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h89-8c-3q9">
+                                <rect key="frame" x="178" y="369" width="59" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="waa-9r-UZp">
+                                <rect key="frame" x="20" y="420" width="374" height="474"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xLL-1d-Cg8">
+                                <rect key="frame" x="295" y="369" width="68" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" systemColor="systemBlueColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="sor-Tt-Zbe"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ICr-Jt-4ir" firstAttribute="top" secondItem="sor-Tt-Zbe" secondAttribute="top" constant="16" id="3Lg-J5-xLX"/>
+                            <constraint firstItem="sor-Tt-Zbe" firstAttribute="trailing" secondItem="waa-9r-UZp" secondAttribute="trailing" constant="20" id="5Mf-J2-va1"/>
+                            <constraint firstItem="ICr-Jt-4ir" firstAttribute="centerX" secondItem="7fQ-QL-MVa" secondAttribute="centerX" id="9fP-pB-X4X"/>
+                            <constraint firstItem="h89-8c-3q9" firstAttribute="centerX" secondItem="7fQ-QL-MVa" secondAttribute="centerX" id="AMS-v4-OmD"/>
+                            <constraint firstItem="waa-9r-UZp" firstAttribute="top" secondItem="xLL-1d-Cg8" secondAttribute="bottom" constant="21" id="FqH-7z-Lr5"/>
+                            <constraint firstItem="xLL-1d-Cg8" firstAttribute="top" secondItem="ICr-Jt-4ir" secondAttribute="bottom" constant="25" id="RFg-Qf-JlP"/>
+                            <constraint firstItem="waa-9r-UZp" firstAttribute="bottom" secondItem="sor-Tt-Zbe" secondAttribute="bottom" constant="32" id="W0c-RQ-HXL"/>
+                            <constraint firstItem="h89-8c-3q9" firstAttribute="top" secondItem="ICr-Jt-4ir" secondAttribute="bottom" constant="25" id="XNu-8d-ab8"/>
+                            <constraint firstItem="sor-Tt-Zbe" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="xLL-1d-Cg8" secondAttribute="trailing" constant="51" id="a07-3I-PVO"/>
+                            <constraint firstItem="xLL-1d-Cg8" firstAttribute="leading" secondItem="h89-8c-3q9" secondAttribute="trailing" constant="59" id="mBK-kZ-kbe"/>
+                            <constraint firstItem="waa-9r-UZp" firstAttribute="leading" secondItem="sor-Tt-Zbe" secondAttribute="leading" constant="20" id="uP5-v4-URc"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="costLabel" destination="xLL-1d-Cg8" id="cr1-wM-64J"/>
+                        <outlet property="descriptionTextView" destination="waa-9r-UZp" id="lyq-O1-URF"/>
+                        <outlet property="foodImageView" destination="ICr-Jt-4ir" id="UEa-Np-nNM"/>
+                        <outlet property="foodNameLabel" destination="h89-8c-3q9" id="8Uz-ky-6xh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x7L-RQ-QKU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-149" y="266"/>
+            <point key="canvasLocation" x="-149.27536231884059" y="265.84821428571428"/>
         </scene>
         <!--Food list-->
         <scene sceneID="ShL-Mm-S72">
@@ -32,7 +80,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="yDT-A1-Cet">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseIdentifier" id="yDT-A1-Cet">
                                 <rect key="frame" x="0.0" y="24.5" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yDT-A1-Cet" id="ipI-Xs-BAr">
@@ -83,8 +131,14 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
