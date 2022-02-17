@@ -14,6 +14,7 @@
 		5260F8C827BD4493002F84FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5260F8C627BD4493002F84FB /* LaunchScreen.storyboard */; };
 		5260F8D027BD4500002F84FB /* MasterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5260F8CF27BD4500002F84FB /* MasterTableViewController.swift */; };
 		5260F8D227BD46D1002F84FB /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5260F8D127BD46D1002F84FB /* DetailViewController.swift */; };
+		5260F8D627BEAE7A002F84FB /* MenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5260F8D527BEAE7A002F84FB /* MenuModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		5260F8C927BD4493002F84FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5260F8CF27BD4500002F84FB /* MasterTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterTableViewController.swift; sourceTree = "<group>"; };
 		5260F8D127BD46D1002F84FB /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		5260F8D527BEAE7A002F84FB /* MenuModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				5260F8C127BD4492002F84FB /* Main.storyboard */,
 				5260F8CF27BD4500002F84FB /* MasterTableViewController.swift */,
 				5260F8D127BD46D1002F84FB /* DetailViewController.swift */,
+				5260F8D527BEAE7A002F84FB /* MenuModel.swift */,
 				5260F8C427BD4493002F84FB /* Assets.xcassets */,
 				5260F8C627BD4493002F84FB /* LaunchScreen.storyboard */,
 				5260F8C927BD4493002F84FB /* Info.plist */,
@@ -140,6 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5260F8D627BEAE7A002F84FB /* MenuModel.swift in Sources */,
 				5260F8BC27BD4492002F84FB /* AppDelegate.swift in Sources */,
 				5260F8D027BD4500002F84FB /* MasterTableViewController.swift in Sources */,
 				5260F8BE27BD4492002F84FB /* SceneDelegate.swift in Sources */,
