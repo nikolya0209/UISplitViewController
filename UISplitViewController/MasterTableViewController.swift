@@ -7,11 +7,15 @@
 
 import UIKit
 
+protocol FoodObjectsDelegate: AnyObject {
+    func foodObjectSelected(foodObject: FoodModel)
+}
 
 class MasterTableViewController: UITableViewController {
 
     var food = FoodModel.fetchFood()
     
+    weak var delegate: FoodObjectsDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +28,7 @@ class MasterTableViewController: UITableViewController {
   
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
+        
         return food.count
     }
 
@@ -40,5 +44,9 @@ class MasterTableViewController: UITableViewController {
     }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let currentFood = food[indexPath.row]
+        delegate?.foodObjectSelected(foodObject: currentFood)
+        if let detailVC = delegate as? DetailViewController, let detailNavigationController = detailVC.navigationController {
+            splitViewController?.showDetailViewController(detailNavigationController, sender: nil)
+        }
     }
 }

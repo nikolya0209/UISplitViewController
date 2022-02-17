@@ -22,10 +22,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             let detailViewController = (splitViewController.viewControllers.last as? UINavigationController)?.topViewController as? DetailViewController
         else { fatalError() }
         
-        detailViewController.navigationItem.leftItemsSupplementBackButton = true
-        detailViewController.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem
+//        detailViewController.navigationItem.leftItemsSupplementBackButton = true
+//        detailViewController.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem
         
-        //masterViewController.delegate = detailViewController
+        masterViewController.delegate = detailViewController
         let firstFood = masterViewController.food[3]
         detailViewController.foodObject = firstFood
 

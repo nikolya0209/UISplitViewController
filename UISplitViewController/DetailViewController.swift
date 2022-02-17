@@ -34,3 +34,9 @@ class DetailViewController: UIViewController {
         descriptionTextView.text = foodObject?.smallDescription
     }
 }
+
+extension DetailViewController: FoodObjectsDelegate {
+    func foodObjectSelected(foodObject: FoodModel) {
+        self.foodObject = foodObject
+    }
+}
