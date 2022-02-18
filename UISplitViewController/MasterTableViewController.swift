@@ -14,25 +14,20 @@ protocol FoodObjectsDelegate: AnyObject {
 class MasterTableViewController: UITableViewController {
 
     var food = FoodModel.fetchFood()
-    
     weak var delegate: FoodObjectsDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "reuseIdentifier")
     }
 
     // MARK: - Table view data source
-
-  
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         return food.count
     }
 
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
         let currentFood = food[indexPath.row]
@@ -42,6 +37,7 @@ class MasterTableViewController: UITableViewController {
 
         return cell
     }
+    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let currentFood = food[indexPath.row]
         delegate?.foodObjectSelected(foodObject: currentFood)
